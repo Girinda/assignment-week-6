@@ -1,1 +1,39 @@
-1
+<htmll>
+  <head>
+     <title>Api Key</title>
+     <meta vharset ="UTF=8">
+     <meta = "viewpoint" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+     <div>please enter valid Api key</div>
+     <form> 
+       <input type="email" id="ApiKey" name="ApiKey"/>
+       <button id="submitApiKey">submint</button>
+     </form>
+
+     <script>
+        let rootpath = "https://mysite.itvarsity.org/api/contactbook";
+        document.getelementbyId("submitApiKey").Addeventlistener('click', setApiKey);
+        function setApiKey (Ai){
+        e.preventdefault();
+        
+        apikey = document.getelementbyId("ApiKey").value;
+        fetch(rootpath + "controller/api-key/?apikey"= +apikey)
+        then. (function (response){
+        return response.text()
+})
+        
+        then function (data){
+        if (data == "1") {
+           localstorage.setitem("Apikey",apikey);
+           windows.open("index.html",_self);
+}
+           else {
+           alert(data +"invalid api key entered"!)
+
+}
+})
+}
+     </script>
+  </body>
+</html>
