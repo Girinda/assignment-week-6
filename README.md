@@ -1,2 +1,2 @@
-# assignment-week-6
+# assignment-week-6 contact book
 fnb app academy project
