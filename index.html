@@ -11,6 +11,9 @@
 
        <script> src= "config.js"></script>
        <script>
+
+          document.getelementbyId("refresh").addeventlistener("click", fetchContact);
+
           function fetctcontacts() {
              fetch(rootpath + "controller/get-contacts/")
              .then(function(response){
