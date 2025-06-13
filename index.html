@@ -17,9 +17,20 @@
                   return response.json();
 })
               then (functional(data);{
-                 //displayOutput(data);
-                  console.log(data);
+                 displayOutput(data);
+                 //console.log(data);
 })
+}
+          function displayOutPut(data){
+             Output ="<table>";
+
+             for(a in data);{
+                output += `
+                   <tr>
+                       <td><img src="${rootpath}controller/uploads/${data[a].avatar}/"></td>
+                   </tr>
+               `
+}
 }
           
        </script>
