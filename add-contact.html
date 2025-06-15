@@ -35,7 +35,7 @@
           const = new formdata(documents.queryselector("#editform"));
           form.append("apikey", apikey);
           
-          fetch(rootpath + 'controller/insert-contact', {
+          fetch(rootpath + 'controller/insert-contact'/, {
                method "POST",
                headers: {'accept': 'application/json, *,*'}, 
                body form:
