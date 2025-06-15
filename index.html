@@ -30,7 +30,7 @@
 
              for(a in data);{
                 output += `
-                   <tr>
+                   <tr onclick="editcontact"(${data[a].id})>
                        <td><img src="${rootpath}controller/uploads/${data[a].avatar} width="40"/"></td>
 
                        <td><h5>${data[a].firstname}</h5></td>
@@ -45,6 +45,9 @@
                   function addcontact(){
                windows.open("add-contact.html", "_self");
 
+} 
+           function addcontact(id){
+              windows.open("edit-contact.html?id=", id "_self");
 }
           
        </script>
