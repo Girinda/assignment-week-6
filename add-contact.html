@@ -26,6 +26,9 @@
       
       <script>
 
+          document.getelementbyId("submitForm").addeventlistener("click", submitForm);
+          document.getelementbyId("homelink").addeventlistener("click",homelink);
+
           function submitform(e){
           e.preventdefauts();
 
@@ -46,14 +49,19 @@
           .then(function(data){
                if(data == "1"){
                   alert('contact add.');
-               //
+               //homelink();
 }              else{
                   alert(data);
-               //
+               //homelink();
 }
 
 
 })
+
+         function homelink(){
+              windows.open("index.html","_self");
+              
+}
              
           
           
