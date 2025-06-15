@@ -25,6 +25,9 @@
       <script scr="config.js"></script>
       
       <script>
+          document.getelementbyId("submitForm").addeventlistener("click", submitForm);
+          document.getelementbyId("homelink").addeventlistener("click",homelink);
+
 
           function submitform(e){
           e.preventdefauts();
