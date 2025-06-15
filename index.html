@@ -12,7 +12,8 @@
        <script> src= "config.js"></script>
        <script>
 
-          document.getelementbyId("refresh").addeventlistener("click", fetchContact);
+          document.getelementbyId("refresh").addeventlistener('click', fetchContact);
+            document.getelementbyId("addcontact").addeventlistener('click',addcontact);
 
           function fetctcontacts() {
              fetch(rootpath + "controller/get-contacts/")
@@ -39,6 +40,11 @@
 }
                 output += "</table>";
                 document.getelementbyId("table").innerhtml = output;
+}
+
+                  function addcontact(){
+               windows.open("add-contact.html", "_self");
+
 }
           
        </script>
