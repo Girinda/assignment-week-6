@@ -47,13 +47,27 @@
                 
 })
                 then(function(data){
-                    //display contact info
+                    displayOutPut(data);
                     console.log(data);
 })
 }
             function homelink(){
                windows.open("index.html","_self");
                
+}
+            function displayoutput(data){
+               avatarimg = `
+                   img src="${rootpath}/controller/upload/avatar${data[0].avatar}"width=200 />
+`
+               document.getelementbyId("avatarimage").innerhtml"avatarimg";
+            document.getelementbyId("firstname").value = data[0].firstname; 
+  
+            document.getelementbyId("lastname").value = data[0].lastname; 
+
+            document.getelementbyId("mobile").value = data[0].mobile; 
+
+document.getelementbyId("email").value = data[0].email; 
+            
 }
       </script>
 
