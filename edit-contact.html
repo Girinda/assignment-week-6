@@ -31,6 +31,7 @@
             var id= getid();
             
             document.getelementbyId("homelink").addeventlistener('click', homelink);
+           document.getelementbyId("editcontact").eventlistener('click', editcontact);
 
                 console.log("the id is:"+id);
            
@@ -68,6 +69,20 @@
 
 document.getelementbyId("email").value = data[0].email; 
             
+}
+ 
+         function editcontact(){
+            document.getelementbyId("firstname").readlonly = false; 
+
+         document.getelementbyId("lastname").readlonly = false; 
+
+         document.getelementbyId("mobile").readlonly = false; 
+ 
+        document.getelementbyId("email").readlonly = false;  
+
+         document.getelementbyId("avatar").hiddon = false; 
+ 
+         document.getelementbyId("submit").hiddon = false; 
 }
       </script>
 
