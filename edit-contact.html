@@ -3,7 +3,7 @@
       <meta charset="UTF-8">
       <title></title>
   </head>
-  <body>
+  <body onload="getcontact()">
       <div =id="avatarimage"></div>
       <form id="editform">
          <label for="firstname">first name</label>
@@ -29,6 +29,9 @@
       <script> 
              
             var id= getid();
+            
+            document.getelementbyId("homelink").addeventlistener('click', homelink);
+
                 console.log("the id is:"+id);
            
             function getid(){
@@ -36,6 +39,21 @@
                 var pos =  url.search("=");
                 var id= url.slice(pos + 1);
                 return id;
+}
+            function getcontact(){
+                fetch ('rootpath +controller/get-contact/?id='+id);
+                .then(function(response){
+                     return response.json();
+                
+})
+                then(function(data){
+                    //display contact info
+                    console.log(data);
+})
+}
+            function homelink(){
+               windows.open("index.html","_self");
+               
 }
       </script>
 
