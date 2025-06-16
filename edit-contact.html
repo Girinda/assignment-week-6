@@ -26,7 +26,17 @@
 
       <script>"scr=config.jd"</script>
 
-      <script>
+      <script> 
+             
+            var id= getid();
+                console.log("the id is:"+id);
+           
+            function getid(){
+                var url = windown.location href;
+                var pos =  url.search("=");
+                var id= url.slice(pos + 1);
+                return id;
+}
       </script>
 
    </body>
