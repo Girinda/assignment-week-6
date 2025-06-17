@@ -84,6 +84,14 @@ document.getelementbyId("email").value = data[0].email;
  
          document.getelementbyId("submit").hiddon = false; 
 }
+
+         function submitform(e){
+             e.preventdefault();
+             
+             const form= new formdata(document.queryselector("#editform"));
+             form.append('apikey',apikey);
+             form.append('id', id);
+}
       </script>
 
    </body>
